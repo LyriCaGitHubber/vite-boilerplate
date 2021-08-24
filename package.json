@@ -12,7 +12,8 @@
     "test": "prettier --check . && eslint . && stylelint \"**/*.css\"",
     "start": "node dist/server.js",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -o dist/storybook"
+    "storybook:build": "build-storybook -o dist/storybook",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\" \"npm run storybook\""
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
